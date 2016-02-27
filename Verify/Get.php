@@ -2,7 +2,7 @@
 
 //https://github.com/shukean/php-verify-input
 
-namespace Filter;
+namespace Verify;
 
 define('INPUT_GET', 1);
 define('INPUT_POST', 2);
