@@ -38,7 +38,7 @@ class Get{
             break;
         }
         if ($need && $value === null){
-            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid '.$key);
+            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments'.$key);
         }
         if (!$need && $value === null){
             return null;
@@ -46,7 +46,7 @@ class Get{
         array_unshift($args, $value);
         $vf_ret = call_user_func_array([__NAMESPACE__.'\Filter', $vf_func], $args);
         if (!$vf_ret){
-            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid '.$key);
+            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments'.$key);
         }
         return $value;
     }
@@ -71,7 +71,7 @@ class Get{
                     $value = self::value($get[0], $get[1]);
                     break;
                 default:
-                    throw new \Exception('Invalid arguments ');
+                    throw new \Exception("Invalid arguments num: line $key lt 2");
                     break;
             }
             $_key = is_numeric($key) ? $get[0] : $key;
