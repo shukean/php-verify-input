@@ -1,4 +1,4 @@
-<?
+<?php
 
 //https://github.com/shukean/php-verify-input
 
@@ -59,7 +59,7 @@ class Filter{
         return false;
     }
 
-    public static function vfTinyInt(value, $unsigned=true){
+    public static function vfTinyInt($value, $unsigned=true){
         return $unsigned ? self::vfNumeric($value, 0, 255) : self::vfNumeric($value, -128, 127);
     }
 
