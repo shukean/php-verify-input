@@ -80,7 +80,7 @@ class Filter{
     }
 
     public static function vfNumeric($vlaue, $min, $max){
-        return is_numeric($value) && $value >= $min && $value <= $max;
+        return is_numeric($vlaue) && $vlaue >= $min && $vlaue <= $max;
     }
 
     public static function vfLocation($value){
