@@ -4,12 +4,6 @@
 
 namespace Verify;
 
-define('INPUT_GET', 1);
-define('INPUT_POST', 2);
-define('INPUT_COOKIE', 4);
-define('INPUT_YAF_PARAMS', 8);
-define('INPUT_REQUEST', 3);
-
 class Get{
 
     public static function value($key, $vf_func, $need=true, $invalid_msg=null, array $args=[], $type=INPUT_REQUEST){
