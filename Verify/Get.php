@@ -46,7 +46,7 @@ class Get{
         array_unshift($args, $value);
         $vf_ret = call_user_func_array([__NAMESPACE__.'\Filter', $vf_func], $args);
         if (!$vf_ret){
-            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments'.$key);
+            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments '.$key);
         }
         return $value;
     }
