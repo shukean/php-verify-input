@@ -6,7 +6,7 @@ namespace Verify;
 
 class Get{
 
-    public static function value($key, $vf_func, $need=true, $invalid_msg=null, array $args=[], $type=INPUT_REQUEST){
+    public static function value($key, $vf_func, $need=false, $invalid_msg=null, array $args=[], $type=INPUT_REQUEST){
         $value = null;
         while ($type && $value === null) {
             if ($type & INPUT_GET){
