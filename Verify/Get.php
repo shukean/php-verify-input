@@ -38,7 +38,7 @@ class Get{
             break;
         }
         if ($need && $value === null){
-            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments'.$key);
+            throw new \Exception($invalid_msg ? $invalid_msg : 'Invalid arguments '.$key);
         }
         if (!$need && $value === null){
             return null;
