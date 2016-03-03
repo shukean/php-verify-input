@@ -24,6 +24,7 @@ define('VERIFY_NoEmpty', 'vfNoEmpty');
 define('VERIFY_Json', 'vfJson');
 define('VERIFY_Array', 'vfArray');
 define('VERIFY_Set', 'vfSet');
+define('VERIFY_Bool', 'vfBool');
 
 class Filter{
 
