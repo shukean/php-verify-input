@@ -9,24 +9,24 @@ class Get{
     public static function value($key, $vf_func, $need=false, $invalid_msg=null, array $args=[], $type=INPUT_REQUEST){
         $value = null;
         while ($type && $value === null) {
-            if ($type & INPUT_GET){
+            if ($type & ARG_INPUT_GET){
                 $value = array_key_exists($key, $_GET) ? $_GET[$key] : $value;
-                $type ^= INPUT_GET;
+                $type ^= ARG_INPUT_GET;
                 continue;
             }
-            if ($type & INPUT_POST){
+            if ($type & ARG_INPUT_POST){
                 $value = array_key_exists($key, $_POST) ? $_GET[$key] : $value;
-                $type ^= INPUT_POST;
+                $type ^= ARG_INPUT_POST;
                 continue;
             }
-            if ($type & INPUT_YAF_PARAMS){
+            if ($type & ARG_INPUT_YAF_PARAMS){
                 $value = \Yaf\Application::app()->getDispatcher()->getRequest()->getParam($key, null);
-                $type ^= INPUT_YAF_PARAMS;
+                $type ^= ARG_INPUT_YAF_PARAMS;
                 continue;
             }
-            if ($type & INPUT_COOKIE){
+            if ($type & ARG_INPUT_COOKIE){
                 $value = array_key_exists($key, $_COOKIE) ? $_COOKIE[$key] : $value;
-                $type ^= INPUT_COOKIE;
+                $type ^= ARG_INPUT_COOKIE;
                 continue;
             }
             break;

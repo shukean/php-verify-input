@@ -1,11 +1,11 @@
 <?php
 
 
-define('INPUT_GET', 1);
-define('INPUT_POST', 2);
-define('INPUT_COOKIE', 4);
-define('INPUT_YAF_PARAMS', 8);
-define('INPUT_REQUEST', 3);
+define('ARG_INPUT_GET', 1);
+define('ARG_INPUT_POST', 2);
+define('ARG_INPUT_COOKIE', 4);
+define('ARG_INPUT_YAF_PARAMS', 8);
+define('ARG_INPUT_REQUEST', 3);
 
 define('VERIFY_TinyInt', 'vfTinyInt');
 define('VERIFY_SmallInt', 'vfSmallInt');
