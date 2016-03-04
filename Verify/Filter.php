@@ -55,7 +55,7 @@ class Filter{
     }
 
     public static function vfId($value){
-        return self::vfNumeric($value, 1, PHP_INI_MAX);
+        return self::vfNumeric($value, 1, PHP_INT_MAX);
     }
 
     public static function vfNumeric($vlaue, $min, $max){
