@@ -15,7 +15,7 @@ class Get{
                 continue;
             }
             if ($type & ARG_INPUT_POST){
-                $value = array_key_exists($key, $_POST) ? $_GET[$key] : $value;
+                $value = array_key_exists($key, $_POST) ? $_POST[$key] : $value;
                 $type ^= ARG_INPUT_POST;
                 continue;
             }
